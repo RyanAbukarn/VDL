@@ -1,0 +1,32 @@
+{%  extends 'main.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <table class="table table-sm">
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Action</th>
+
+                </tr>
+
+                {% for file in documents %}
+
+                <tr>
+                    <td>{{file.name}}</td>
+                    <td>{{file.description}}</td>
+                    <td><a class="btn btn-sm btn-primary" href="{% url 'show' file.id %}">View</a></td>
+                </tr>
+                {% endfor %}
+
+
+            </table>
+        </div>
+    </div>
+</div>
+<a class="btn btn-sm btn-primary" href="{% url 'form-upload' %}">New</a>
+
+{% endblock %}

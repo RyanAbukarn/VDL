@@ -1,0 +1,28 @@
+{%  extends 'main.html' %}
+
+{% block content %}
+
+
+<br>
+
+<div class="row">
+    <div class="col-md">
+        <div class="card card-body">
+            <table class="table table-sm">
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+
+                </tr>
+
+
+                <tr>
+                    <td>{{document.name}}</td>
+                    <td>{{document.description}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
